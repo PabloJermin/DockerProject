@@ -13,4 +13,4 @@ RUN mkdir -p /var/www/html/uploads
 EXPOSE 80
 
 # start apache
-CMD [ "apache-foreground" ]
+CMD [ "apache2-foreground" ]
