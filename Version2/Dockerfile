@@ -7,7 +7,7 @@ COPY . /usr/src/myapp
 RUN mkdir -p /var/www/html/uploads
 
 # permissions for the upload folder
-RUN chmod -R www-data:www-data /var/www/html/uploads \ && chmod -R 755 /var/www/html/uploads
+RUN chmod -R www-data:www-data /var/www/html/uploads && chmod -R 755 /var/www/html/uploads
 
 # exposing the port 80
 EXPOSE 80
