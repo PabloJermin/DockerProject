@@ -28,7 +28,10 @@ RUN mkdir -p /var/www/html/uploads
 
 # Set the proper permissions for the uploads directory
 RUN chown -R www-data:www-data /var/www/html/uploads \
-    && chmod -R 755 /var/www/html/uploads
+    && chmod -R 755 /var/www/html/uploads \
+    # granting apache permissions to access files.
+    && find /var/www/html -type d -exec chmod g+rx {} + \
+    && find /var/www/html -type f -exec chmod g+r {} +
 
 # Enable Apache mod_rewrite if needed (optional)
 RUN a2enmod rewrite
