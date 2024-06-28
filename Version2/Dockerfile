@@ -34,8 +34,6 @@ RUN chown -R www-data:www-data /var/www/html/uploads \
     && find /var/www/html -type d -exec chmod g+rx {} + \
     && find /var/www/html -type f -exec chmod g+r {} +
 
-# Enable Apache mod_rewrite if needed (optional)
-RUN a2enmod rewrite
 
 # Expose port 80 to the host
 EXPOSE 80
