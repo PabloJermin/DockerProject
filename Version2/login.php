@@ -1,4 +1,7 @@
 <?php
+// Start the session
+session_start();
+
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
@@ -14,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Successful login
         echo "Login successful! Welcome, " . $username . ".";
     } else {
-        // Failed login
+        // Failed login, redirect to error page
         header("Location: error.html");
-        exit()
+        exit();
     }
 } else {
     echo "Invalid request method.";
