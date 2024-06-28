@@ -15,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Login successful! Welcome, " . $username . ".";
     } else {
         // Failed login
-        echo "Invalid username or password. Please try again.";
+        header("Location: error.html");
+        exit()
     }
 } else {
     echo "Invalid request method.";
