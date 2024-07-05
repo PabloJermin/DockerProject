@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = htmlspecialchars($_POST['password']);
 
     // For demonstration purposes, let's use a hard-coded username and password
-    $correct_username = "admin";
-    $correct_password = "password123";
+    $correct_username = "joy";
+    $correct_password = "yoga111";
 
     // Check if the username and password are correct
     if ($username == $correct_username && $password == $correct_password) {
